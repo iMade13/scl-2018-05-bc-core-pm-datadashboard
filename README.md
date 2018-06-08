@@ -1,6 +1,6 @@
 # Data Dashboard
 
-## Preámbulo
+## Preámbulo :)
 
 En Laboratoria, las Training Managers (TMs) hacen un gran trabajo al analizar la
 mayor cantidad de datos posibles respecto al progreso de las estudiantes para
