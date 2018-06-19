@@ -1,7 +1,7 @@
 document.getElementById('jsonBtn').addEventListener('click', cargarJSON);
 
 function cargarJSON() {
-  fetch('./users.json')
+  fetch('../data/cohorts/lim-2018-03-pre-core-pw/users.json')
     .then((usersResponse) => {// es una función
       return usersResponse.json(); // hace la conexión y lo definimos como queremos que nos devuelvan los datos
     })
