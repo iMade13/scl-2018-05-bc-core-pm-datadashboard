@@ -1,0 +1,155 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1 em;
+    line-height: 1.7em;
+    color:black;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.navbar {
+    height: 100px;
+    padding: 15px 10px;
+    background:#FFE521;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+    background-color: goldenrod!important;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+
+}
+
+.title-data-dashboard{
+    font-family: 'Bitter', sans-serif;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 400px;
+    max-width: 400px;
+    background: white;
+    color: gray;
+    transition: all 0.5s;
+    padding: 15px;
+}
+
+#sidebar.active {
+    margin-left: -400px;
+}
+
+#sidebar .sidebar-header {
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    border-bottom: 1px solid lightgray;
+}
+
+#sidebar ul li a:hover {
+    color: black;
+    background: lightgrey;
+}
+
+.logout {
+    position: absolute;;
+    bottom:0px;
+    min-width: 365px;
+    max-width: 365px;
+
+}
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.5s;
+}
+
+
+.list
+    {
+    float: left;
+    padding-right: 20px;
+    width: 50%;
+    border-bottom: 1px solid seagreen;
+  
+    }
+
+    ul .list{
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+
+}
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+        min-width: 250px;
+        max-width: 250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+
+    .logout{
+        min-width: 240px;
+        max-width: 240px;
+    }
+}
