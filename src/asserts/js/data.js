@@ -8,12 +8,22 @@ function cargarJSON() {
     .then(function(data) { // otra función
       let html = '';
       data.forEach(function(users) {
-        html += `
+        html += 
+        `
+        <tr>
+        <th scope="row">${users.name}</th>
+        <td>${users.signupCohort}</td>
+        <td>${users.timezone}</td>
+        <td>${users.id}</td>
+        </tr>`
+
+        /*
         <div class="col-sm-3"><div class="data-list">${users.id}</div></div>
         <div class="col-sm-3"><div class="data-list">${users.signupCohort} </div></div>
         <div class="col-sm-3"><div class="data-list">${users.name}</div></div>
         <div class="col-sm-3"><div class="data-list">${users.timezone}</div></div>
-        <hr class="hr">`
+        <hr class="hr">*/   
+     
         
         ;
         console.log(data);
