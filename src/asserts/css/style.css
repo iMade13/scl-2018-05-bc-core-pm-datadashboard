@@ -143,6 +143,19 @@ a:focus {
     padding: 20px;
 
 }
+
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #ccc;
+    border-style: solid none;
+    border-width: 1px ;
+    margin: 25px 20px 0;
+    width: 100%
+  }
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */

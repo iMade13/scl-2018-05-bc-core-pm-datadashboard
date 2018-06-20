@@ -8,10 +8,17 @@ function cargarJSON() {
     .then(function(data) { // otra función
       let html = '';
       data.forEach(function(users) {
-        html += `<div class="col-sm-3">${users.id}</div>
+        html += `
+        
+        
+        <div class="col-sm-3">${users.id}</div>
         <div class="col-sm-3">${users.signupCohort} </div>
         <div class="col-sm-3">${users.name}</div>
-        <div class="col-sm-3">${users.timezone}</div> `;
+        <div class="col-sm-3">${users.timezone}</div>
+        <hr>`
+        
+        
+        ;
         console.log(data);
       });
       document.getElementById('resultado').innerHTML = html;
