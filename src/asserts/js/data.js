@@ -9,14 +9,11 @@ function cargarJSON() {
       let html = '';
       data.forEach(function(users) {
         html += `
-        
-        
-        <div class="col-sm-3">${users.id}</div>
-        <div class="col-sm-3">${users.signupCohort} </div>
-        <div class="col-sm-3">${users.name}</div>
-        <div class="col-sm-3">${users.timezone}</div>
-        <hr>`
-        
+        <div class="col-sm-3"><div class="data-list">${users.id}</div></div>
+        <div class="col-sm-3"><div class="data-list">${users.signupCohort} </div></div>
+        <div class="col-sm-3"><div class="data-list">${users.name}</div></div>
+        <div class="col-sm-3"><div class="data-list">${users.timezone}</div></div>
+        <hr class="hr">`
         
         ;
         console.log(data);
@@ -27,4 +24,5 @@ function cargarJSON() {
       console.log(error);
     });
 };
+
 
