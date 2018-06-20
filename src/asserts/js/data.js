@@ -8,11 +8,25 @@ function cargarJSON() {
     .then(function(data) { // otra función
       let html = '';
       data.forEach(function(users) {
-        html += `<div class="col-sm-4">${users.id}</div>
-        <div class="col-sm-4">${users.signupCohort} </div>
-        <div class="col-sm-4">${users.name}</div>
+        html += 
+        `
+        <tr>
+        <th scope="row">${users.name}</th>
+        <td>${users.signupCohort}</td>
+        <td>${users.timezone}</td>
+        <td>${users.id}</td>
+        </tr>`
 
-         `;
+        /*
+        <div class="col-sm-3"><div class="data-list">${users.id}</div></div>
+        <div class="col-sm-3"><div class="data-list">${users.signupCohort} </div></div>
+        <div class="col-sm-3"><div class="data-list">${users.name}</div></div>
+        <div class="col-sm-3"><div class="data-list">${users.timezone}</div></div>
+        <hr class="hr">*/   
+     
+        
+        ;
+        console.log(data);
       });
       document.getElementById('resultado').innerHTML = html;
     })
@@ -20,4 +34,5 @@ function cargarJSON() {
       console.log(error);
     });
 };
+
 

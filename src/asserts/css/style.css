@@ -15,7 +15,7 @@ a:hover,
 a:focus {
     color: inherit;
     text-decoration: none;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 .navbar {
@@ -37,6 +37,7 @@ a:focus {
     height: 30px;
     border-radius: 5px;
 
+
 }
 
 .title-data-dashboard{
@@ -51,7 +52,10 @@ a:focus {
     display: flex;
     width: 100%;
     align-items: stretch;
+    
 }
+
+
 
 #sidebar {
     min-width: 400px;
@@ -60,6 +64,9 @@ a:focus {
     color: gray;
     transition: all 0.5s;
     padding: 15px;
+    z-index: 5;
+  
+    
 }
 
 #sidebar.active {
@@ -68,18 +75,26 @@ a:focus {
 
 #sidebar .sidebar-header {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+
 
 }
 
 #sidebar ul.components {
     padding: 20px 0;
 
+    
+
+
 }
 
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
+#sidebar li p {
+    color: black;
+    padding: 0px 10px;
+    font-size: 1.1em;
+    display: block;
+    border-bottom: 1px solid lightgray;
 }
 
 #sidebar ul li a {
@@ -95,7 +110,7 @@ a:focus {
 }
 
 .logout {
-    position: absolute;;
+    position: absolute;
     bottom:0px;
     min-width: 365px;
     max-width: 365px;
@@ -110,32 +125,53 @@ a:focus {
 
 #content {
     width: 100%;
-    padding: 20px;
+    padding: 0px;
     min-height: 100vh;
     transition: all 0.5s;
 }
 
-
-.list
-    {
-    float: left;
-    padding-right: 20px;
-    width: 50%;
-    border-bottom: 1px solid seagreen;
-  
-    }
-
-    ul .list{
-    list-style-type: none;
-    margin: 0;
-    padding: 20px;
+#nav {
+margin: 15px;
+background-color: white;
 
 }
+
+.nav-link {
+    
+    padding: .8rem 1rem!important;
+}
+
+.hr {
+
+    border-color: #ccc;
+    border-style: solid none;
+    border-width: 1px ;
+    margin: 0px 0px 0;
+    width: 100%
+  }
+
+  .data-list {
+    padding:10px; 
+    background-color: #f5f5ef;
+}
+
+  .data-list:nth-of-type(2) {
+      
+      background-color:forestgreen!important;
+  }
+
+  #resultado {
+margin-left: 15px;
+margin-right: 15px}
+
+  .col-sm-3 {padding: 0px!important; }
+
+ 
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     #sidebar {
         margin-left: -250px;
         min-width: 250px;
@@ -151,5 +187,19 @@ a:focus {
     .logout{
         min-width: 240px;
         max-width: 240px;
+
     }
+
+    .title-data-dashboard{
+        font-size: 30px;
+    }
+}
+
+@media(max-width:550px){
+
+    .title-data-dashboard{
+        font-size: 20px;
+
+
+}
 }
