@@ -55,6 +55,8 @@ a:focus {
     
 }
 
+
+
 #sidebar {
     min-width: 400px;
     max-width: 400px;
@@ -63,6 +65,7 @@ a:focus {
     transition: all 0.5s;
     padding: 15px;
     z-index: 5;
+  
     
 }
 
@@ -135,7 +138,7 @@ background-color: white;
 
 .nav-link {
     
-    padding: .8rem 3rem!important;
+    padding: .8rem 1rem!important;
 }
 
 .hr {
@@ -149,7 +152,7 @@ background-color: white;
 
   .data-list {
     padding:10px; 
-    background-color:lightgrey;
+    background-color: #f5f5ef;
 }
 
   .data-list:nth-of-type(2) {
