@@ -139,6 +139,7 @@ a:focus {
 
 #nav {
 margin: 15px;
+width: 98%;
 
 }
 
@@ -154,7 +155,7 @@ margin: 15px;
     }
 
 
-.nav-link {
+.nav-link5 {
     
     padding: .8rem 1rem!important; /*ajusta tamaño de tabs de navegación al interior del content*/
 }
