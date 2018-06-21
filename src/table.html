@@ -9,8 +9,10 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="asserts/css/style.css">
 
 </head>
@@ -20,120 +22,117 @@
         <!-- Sidebar -->
         <nav id="sidebar">
             <div id="containerNav">
+                <div class="sidebar-header">
+                    <img src="asserts/img/labologo.png" class="img-fluid">
+                </div>
 
-                    <div class="sidebar-header">
-                            <img src="asserts/img/labologo.png" class="img-fluid">
-                        </div>
-            
-                        <ul class="list-unstyled components">
-            
-                           <li>
-                                <img src="asserts/img/avatar.png" align="left">
-                              <p>NOMBRE USUARIA <br>
-                                correo@usuaria.com
-                              </p>
-                          
-                           </li>
-                            
-                            <li>
-                                <a href="#">DATA DASHBOARD</a>
-                            </li>
-                           
-                            <li>
-                                <a href="#">CONFIGURACION</a>
-                            </li>
-                            
-                        </ul>
-            
-                       <div class="logout">
-            
-                        <ul class="list-unstyled components">
-                            <li>
-                                <a href="#">CHAO</a>
-                            </li>
-                        </ul>
-            
-                       </div>
+                <ul class="list-unstyled components">
+                    <li>
+                        <img src="asserts/img/avatar.png" align="left">
+                        <p>NOMBRE USUARIA <br> 
+                           correo@usuaria.com
+                        </p>
+                    </li>
+                    <li>
+                        <a href="#">DATA DASHBOARD</a>
+                    </li>
+                    <li>
+                        <a href="#">CONFIGURACION</a>
+                    </li>
+                </ul>
+
+                <div class="logout">
+                    <ul class="list-unstyled components">
+                        <li>
+                        <a href="#">CHAO</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
         <!--  data dashboard -->
         <div id="content">
-        <header>
-            <nav class="navbar">
-                <div class="container-fluid">
-                        <div class="col-sm-6"> 
-                        <h1 class="title-data-dashboard">Data Dashboard</h1>
+            <header id="top">
+                <nav class="navbar">
+                    <div class="container-fluid">
+                        <div class="col-sm-6">
+                            <h1 class="title-data-dashboard">Data Dashboard</h1>
                         </div>
-                        <div class="col-sm-1"> 
-                                <button type="button" id="sidebarCollapse" class="navbar-btn">
-                                 <i class="fas fa-align-left"></i>
-                                </button></div>
-                </div>
-            </nav>
-        </header>
 
-          <!--  <a href="#" class="button">Cargar JSON</a> Arreglar error para no borrar tabla-->
+                        <div class="col-sm-1">
+                            <button type="button" id="sidebarCollapse" class="navbar-btn">
+                                <i class="fas fa-align-left"></i>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </header>
 
+            <!--  <a href="#" class="button">Cargar JSON</a> boton llamar json-->
+
+             <!--INICIO nav dentro de container-->
             <section id="nav">
-          <ul class="nav nav-tabs">
-           
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">COHORTS</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">cohort1 </a>
-                <a class="dropdown-item button" id="jsonBtn"  href="#">lim-2018-03-pre-core-pw</a>
-                <a class="dropdown-item button" id="jsonprogress" href="#">cohort2</a>
-               
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Progresos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Resumen</a>
-            </li>
-          </ul>
-        </section>
-            
-        <div class="row" id="nav">
-        
-            <table class="table table-hover">
-                <thead>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">COHORTS</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">cohort1 </a>
+                            <a class="dropdown-item button" id="jsonBtn" href="#">lim-2018-03-pre-core-pw</a>
+                            <a class="dropdown-item button" id="jsonprogress" href="#">cohort2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Progresos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resumen</a>
+                    </li>
+                </ul>
+            </section>
+            <!--FIN nav dentro de container-->
+
+
+            <!--DIV QUE DESPLIEGA CONTENIDO DE COHORTS-->
+            <div class="row" id="nav">
+                <table class="table table-hover">
+                    <thead>
                         <tr>
-                          <th scope="col">Nombre</th>
-                          <th scope="col">Cohort</th>
-                          <th scope="col">Zona</th>
-                          <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Cohort</th>
+                            <th scope="col">Zona</th>
+                            <th scope="col">ID</th>
                         </tr>
-                      </thead>
-                      <tbody id="resultado">
+                    </thead>
+                    <tbody id="resultado">
                         <!-- AQUI CARGA CONTENIDO DE USERS.JSON-->
-                      </tbody>
-                          
-            </table>
-            
+                    </tbody>
+                </table>
+            </div>
 
-        </div>
-                
-       </div>
+            <div class="row" id="nav">
+            <a href="#top">SUBIR</a>
+            </div>
 
-            
-    </div>
+        </div> <!--  fin data dashboard -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+
+        <!--  data dashboard -->
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
             });
-        });
-    </script>
+        </script>
 
-    <script src="asserts/js/data.js"></script>
+        <script src="asserts/js/data.js"></script>
 </body>
 
 </html>
-
