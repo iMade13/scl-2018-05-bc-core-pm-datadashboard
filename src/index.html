@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -18,17 +19,17 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper"> <!-- TRANSFORMAR A SECCION-->
         <!-- Sidebar -->
-        <nav id="sidebar">
+        <nav id="sidebar"> 
             <div id="containerNav">
                 <div class="sidebar-header">
-                    <img src="asserts/img/labologo.png" class="img-fluid">
+                    <img src="asserts/img/labologo.png" class="img-fluid" alt="logo">
                 </div>
 
                 <ul class="list-unstyled components">
                     <li>
-                        <img src="asserts/img/avatar.png" align="left">
+                        <img src="asserts/img/avatar.png" align="left" alt="avatar">
                         <p>NOMBRE USUARIA <br> 
                            correo@usuaria.com
                         </p>
@@ -52,11 +53,11 @@
         </nav>
 
         <!--  data dashboard -->
-        <div id="content">
-            <header id="top">
+        <div id="content"> <!--CONVERTIR A SECCION-->
+            <header id="top"> <!--està ok?-->
                 <nav class="navbar">
                     <div class="container-fluid">
-                        <div class="col-sm-3">
+                        <div class="col-sm-3 col-xs-12">
                             <h1 class="title-data-dashboard">
                              Data Dashboard</h1>
                         </div>
@@ -73,7 +74,7 @@
             <!--  <a href="#" class="button">Cargar JSON</a> boton llamar json-->
 
              <!--INICIO nav dentro de container-->
-            <section id="nav">
+            <section id="nav"> <!--está bien?-->
                 <ul class="nav nav-tabs">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">COHORTS</a>
@@ -81,6 +82,7 @@
                             <a class="dropdown-item" href="#">cohort1 </a>
                             <a class="dropdown-item button" id="jsonBtn" href="#">lim-2018-03-pre-core-pw</a>
                             <a class="dropdown-item button" id="jsonprogress" href="#">cohort2</a>
+                            </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Progresos</a>
@@ -93,8 +95,8 @@
             <!--FIN nav dentro de container-->
 
 
-            <!--DIV QUE DESPLIEGA CONTENIDO DE COHORTS-->
-            <div class="table-responsive-xs" id="tabla">
+            <!--DIV QUE DESPLIEGA CONTENIDO DE COHORTS  debería usar section?-->
+            <div class="table-responsive-xs" id="tabla"> <!--SECCION-->
                 <table class="table table-hover bg-table"  >
                     <thead>
                         <tr>
@@ -110,11 +112,13 @@
                 </table>
             </div>
 
-            <div class="row" id="nav">
-            <a href="#top">SUBIR</a>
-            </div>
+            <div class="row" id="nav1"><!--cambiar nav-->
+                    <a href="#top"><i class="fas fa-angle-double-up"></i> SUBIR</a>
+            </div>     
 
         </div> <!--  fin data dashboard -->
+        
+        </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
