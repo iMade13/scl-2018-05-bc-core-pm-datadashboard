@@ -18,6 +18,11 @@ td {
     font-size: 0.8em;
     }
 
+    header{ position: relative!important;
+    z-index: 500;
+    clear: both;
+width: 100%;}
+
 a,
 a:hover,
 a:focus {
@@ -135,6 +140,7 @@ a:focus {
     padding: 0px;
     min-height: 100vh;
     transition: all 0.5s;
+
 }
 
 #nav {
