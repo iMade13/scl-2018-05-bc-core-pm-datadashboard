@@ -36,18 +36,18 @@
           </li>
 
           <li>
-            <a href="#">DATA DASHBOARD</a>
+            <a href="#"><i class="far fa-chart-bar"></i> DATA DASHBOARD</a>
           </li>
           
           <li>
-            <a href="#">CONFIGURACION</a>
+            <a href="#"><i class="fas fa-cogs"></i> CONFIGURACION</a>
           </li>
         </ul>
 
       <div class="logout">
           <ul class="list-unstyled components">
             <li>
-              <a href="#">CERRAR SESIÓN</a>
+              <a href="#"><i class="fas fa-sign-out-alt"></i> CERRAR SESIÓN</a>
             </li>
           </ul>
         </div>
@@ -82,9 +82,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">COHORTS</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">cohort1 </a>
                             <a class="dropdown-item button" id="jsonBtn" href="#">lim-2018-03-pre-core-pw</a>
-                            <a class="dropdown-item button" id="jsonprogress" href="#">cohort2</a>
                             </div>
                     </li>
                     <li class="nav-item">
@@ -99,7 +97,7 @@
 
 
             <!--DIV QUE DESPLIEGA CONTENIDO DE COHORTS  debería usar section?-->
-            <div class="table-responsive-xs row-content" id="tabla"> <!--SECCION-->
+            <section id="table-data" class="table-responsive-xs row-content" > <!--SECCION-->
                 <table class="table table-hover bg-table"  >
                     <thead>
                         <tr>
@@ -113,11 +111,11 @@
                         <!-- AQUI CARGA CONTENIDO DE USERS.JSON-->
                     </tbody>
                 </table>
-            </div>
+            </section>
 
-            <div class="row row-content"><!--cambiar nav-->
+            <section class="row row-content" id="up-btn"><!--cambiar nav-->
                     <a href="#top"><i class="fas fa-angle-double-up"></i> SUBIR</a>
-            </div>     
+            </section>     
 
         </div> <!--  fin data dashboard -->
         
