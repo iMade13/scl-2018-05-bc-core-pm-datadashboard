@@ -19,42 +19,45 @@
 </head>
 
 <body>
-    <div class="wrapper"> <!-- TRANSFORMAR A SECCION-->
+  <div class="wrapper"> <!-- TRANSFORMAR A SECCION-->
         <!-- Sidebar -->
-        <nav id="sidebar"> 
-            <div id="containerNav">
-                <div class="sidebar-header">
-                    <img src="asserts/img/labologo.png" class="img-fluid" alt="logo">
-                </div>
+    <nav id="sidebar"> 
+      <div id="containerNav">
+        <div class="sidebar-header">
+          <img src="asserts/img/labologo.png" class="img-fluid" alt="logo">
+        </div>
 
-                <ul class="list-unstyled components">
-                    <li>
-                        <img src="asserts/img/avatar.png" align="left" alt="avatar">
-                        <p>NOMBRE USUARIA <br> 
-                           correo@usuaria.com
-                        </p>
-                    </li>
-                    <li>
-                        <a href="#">DATA DASHBOARD</a>
-                    </li>
-                    <li>
-                        <a href="#">CONFIGURACION</a>
-                    </li>
-                </ul>
+        <ul class="list-unstyled navSidebar">
+          <li>
+              <img src="asserts/img/avatar.png" align="left" alt="avatar">
+               <p>NOMBRE USUARIA <br> 
+                  correo@usuaria.com
+               </p>
+          </li>
 
-                <div class="logout">
-                    <ul class="list-unstyled components">
-                        <li>
-                        <a href="#">CHAO</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+          <li>
+            <a href="#">DATA DASHBOARD</a>
+          </li>
+          
+          <li>
+            <a href="#">CONFIGURACION</a>
+          </li>
+        </ul>
+
+      <div class="logout">
+          <ul class="list-unstyled components">
+            <li>
+              <a href="#">CERRAR SESIÓN</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
 
         <!--  data dashboard -->
-        <div id="content"> <!--CONVERTIR A SECCION-->
-            <header id="top"> <!--està ok?-->
+        <div id="content"> 
+            <header id="top"> 
                 <nav class="navbar">
                     <div class="container-fluid">
                         <div class="col-sm-3 col-xs-12">
@@ -71,11 +74,11 @@
                 </nav>
             </header>
 
-            <!--  <a href="#" class="button">Cargar JSON</a> boton llamar json-->
+          
 
              <!--INICIO nav dentro de container-->
-            <section id="nav"> <!--está bien?-->
-                <ul class="nav nav-tabs">
+            <section id="nav-Tab"> <!--está bien?-->
+                <ul class="nav row-content">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">COHORTS</a>
                         <div class="dropdown-menu">
@@ -96,7 +99,7 @@
 
 
             <!--DIV QUE DESPLIEGA CONTENIDO DE COHORTS  debería usar section?-->
-            <div class="table-responsive-xs" id="tabla"> <!--SECCION-->
+            <div class="table-responsive-xs row-content" id="tabla"> <!--SECCION-->
                 <table class="table table-hover bg-table"  >
                     <thead>
                         <tr>
@@ -112,13 +115,13 @@
                 </table>
             </div>
 
-            <div class="row" id="nav1"><!--cambiar nav-->
+            <div class="row row-content"><!--cambiar nav-->
                     <a href="#top"><i class="fas fa-angle-double-up"></i> SUBIR</a>
             </div>     
 
         </div> <!--  fin data dashboard -->
         
-        </div>
+      </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
@@ -129,7 +132,7 @@
 
         <!--  js propios -->
 
-        <script src="asserts/js/otraData.js"></script> <!--cambiar a data cuando se use el otro archivo-->
+        <script src="asserts/js/data.js"></script> <!--cambiar a data cuando se use el otro archivo-->
         <script src="asserts/js/toggle.js"></script> <!--oculta y muesta sidebar-->
 </body>
 

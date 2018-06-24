@@ -19,12 +19,7 @@ Promise.all([ // Ejecuta todas las llamadas de manera paralela
     console.log(element.role);
     console.log(element.id);
     console.log(element.timezone);
-
-    cohorts.forEach(element2 => { // muestra la data de users en la consola del navegador
-        console.log(element2.id);
-        console.log(element2.start);
-        console.log(element2.coursesIndex);
-        console.log(element2.end);
+;
   })
 
 
@@ -34,5 +29,5 @@ console.log(result);
   (error)=>{ // Al menos una llamada falló
   }
 );
-})
+
 
