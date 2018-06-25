@@ -9,11 +9,11 @@ Para la toma de decisión de nuestro prototipo se realizó una entrevista a Vale
 de Data Dashboard. Con sus requerimientos hemos elegido las principales funcionalidades que debe tener la aplicación
 manteniendo la gráfica corporativa.
 
-##Que muestra actualmente el DD
+### Que muestra actualmente el DD
 
 Actualmente, el Data Dashboard no está completo. Durante el proceso de diseño nos dimos cuenta que habrían muchos cambios al momento de ver como planteamos la información. Sin embargo, se realizó una maqueta html-css lo más fiel a los mockups entregados anteriormente. Por ahora, lo unico que entrega la plataforma, es el listado de alumnas del cohort que teniamos disponible.
 
-## Prototipo de Baja Fidelidad
+#### Prototipo de Baja Fidelidad
 
 <a href="https://ibb.co/f0OG7o"><img src="https://preview.ibb.co/dL5k08/index_html_bajafidelidad.jpg" alt="index_html_bajafidelidad" border="0"></a>
 
