@@ -11,7 +11,7 @@ function cargarJSON() {
         html += 
         `<tr>
         <th scope="row">${users.name}</th>
-        <td>${users.total}</td>
+        <td>${users.signupCohort}</td>
         <td>${users.timezone}</td>
         <td>${users.id}</td>
         </tr>`;   

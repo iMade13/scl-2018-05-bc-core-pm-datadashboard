@@ -1,3 +1,5 @@
+// archivo para experimentar con js
+
 Promise.all([ // Ejecuta todas las llamadas de manera paralela
   fetch('../data/cohorts/lim-2018-03-pre-core-pw/users.json'),
   fetch('../data/cohorts/lim-2018-03-pre-core-pw/progress.json'),
