@@ -9,30 +9,20 @@ function cargarJSON() {
       let html = '';
       data.forEach(function(users) {
         html += 
-        `
-        <tr>
+        `<tr>
         <th scope="row">${users.name}</th>
         <td>${users.signupCohort}</td>
         <td>${users.timezone}</td>
         <td>${users.id}</td>
-        </tr>`
-
-        /*
-        <div class="col-sm-3"><div class="data-list">${users.id}</div></div>
-        <div class="col-sm-3"><div class="data-list">${users.signupCohort} </div></div>
-        <div class="col-sm-3"><div class="data-list">${users.name}</div></div>
-        <div class="col-sm-3"><div class="data-list">${users.timezone}</div></div>
-        <hr class="hr">*/   
-     
-        
-        ;
+        </tr>`;   
         console.log(data);
       });
       document.getElementById('resultado').innerHTML = html;
     })
-    .catch((error) => {
-      console.log(error);
-    });
-};
 
+  
+
+
+
+}
 

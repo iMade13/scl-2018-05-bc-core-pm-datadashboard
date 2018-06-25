@@ -11,12 +11,18 @@ p {
 }
 
 th {
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 td {
-    font-size: 0.8em;
+    font-size: 0.em;
     }
+
+    header{ 
+    position: relative!important;
+    z-index: 500;
+    clear: both;
+    width: 100%;}
 
 a,
 a:hover,
@@ -76,33 +82,35 @@ a:focus {
 #sidebar .sidebar-header {
     text-align: center;
     padding-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 90px;
 
 }
 
-#sidebar ul.components {
+#sidebar ul.navSidebar{
     padding: 20px 0;
 
 }
 
 #sidebar li p {
     color: black;
-    padding: 0px 10px;
+    padding: 0px 0px;
     font-size: 1.1em;
     display: block;
-    border-bottom: 1px solid lightgray;
+
 }
 
 #sidebar ul li a {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+    border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
+
 }
 
 #sidebar ul li a:hover {
     color: black;
-    background: lightgrey;
+    background: #FFE521;
 }
 
 .logout {
@@ -135,21 +143,23 @@ a:focus {
     padding: 0px;
     min-height: 100vh;
     transition: all 0.5s;
-}
-
-#nav {
-margin: 15px;
 
 }
 
-#tabla {
+.row-content { /*centra el contenido de content*/
     margin: 15px;
-    width: 98%;
-    background-color: #fff;
-    }
+width: 98%;
+
+}
+
+.bg-table {
+    background-color:white;
+}
 
 
-.nav-link {
+
+
+.nav-link5 {
     
     padding: .8rem 1rem!important; /*ajusta tamaño de tabs de navegación al interior del content*/
 }
@@ -163,15 +173,6 @@ margin: 15px;
     width: 100%
 }
 
-.data-list { 
-    padding:10px; 
-    background-color: #f5f5ef;
-}
-
-.data-list:nth-of-type(2) {
-      
-      background-color:forestgreen!important;
-}
 
   #resultado {
     margin-left: 15px;
