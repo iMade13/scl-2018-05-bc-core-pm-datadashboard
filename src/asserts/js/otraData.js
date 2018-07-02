@@ -42,12 +42,19 @@ function computeUsersStats () {
 
   
 
-  for (i=0; i< users.length; i++) {
+  for (i=0; i< users.length; i++) { // recorrido que reconoce los id
     let usersId= users[i].id;
+    let userProgress = (progress[i]);
 
     console.log(usersId)
+    console.log(userProgress)
 
     console.log("hola")
+
+    document.write(Object.keys(users))
+    document.write(Object.entries(userProgress))
+
+    
    
 
   };
