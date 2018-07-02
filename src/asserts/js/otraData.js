@@ -24,9 +24,9 @@ Promise.all([ // Ejecuta todas las llamadas de manera paralela.
 ]).then((responses) => { // Responde a todas las promesas.
   return Promise.all(responses.map((response => response.json())));
 }).then((data) => { // Arreglo de respuestas en json.
-  users = data[0];
+  users = Object.values(data[0]);
   progress = Object.values(data[1]);
-  cohorts = Object.entries(data[2]);
+  cohorts = Object.keys(data[2]);
 
   console.log(cohorts);
   console.log(progress);
@@ -38,16 +38,25 @@ Promise.all([ // Ejecuta todas las llamadas de manera paralela.
   }
 );
 
-window.computeUsersStats (users, progress, courses); {
+function computeUsersStats () {
 
-  let User = []; 
+  
 
-  for (let i = 0; i < users.length; i++){
+  for (i=0; i< users.length; i++) {
+    let usersId= users[i].id;
 
-    let idUser = users[i].id;
+    console.log(usersId)
+
+    console.log("hola")
+   
+
+  };
+
+  
+ 
 
   }
-}
+
 
 
 
