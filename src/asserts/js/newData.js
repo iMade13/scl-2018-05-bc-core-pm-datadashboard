@@ -57,14 +57,32 @@ function computeUsersStats() {
           if (parts.completed === 1) {
             readsCompleted++;
           }
-          case 'quiz':
-          if (parts.completed == 1) {
+          
+        };
+      });
+    });
+
+    userProgress.forEach(coursequiz => {
+      Object.values(coursequiz.parts).forEach(parts => {
+        switch (parts.type) {
+        case 'quiz':
+          if (parts.completed === 1) {
             quizCompleted++;
           }
-          case 'practice':
-          if (parts.completed == 1) {
+          
+        };
+      });
+    });
+
+
+    userProgress.forEach(coursepractice => {
+      Object.values(coursepractice.parts).forEach(parts => {
+        switch (parts.type) {
+        case 'practice':
+          if (parts.completed === 1) {
             practiceCompleted++;
           }
+          
         };
       });
     });
