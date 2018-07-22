@@ -41,24 +41,31 @@ function computeUsersStats() {
       continue;
     } // fin para saltarse {} vacio
 
-    userPercent = progress[i].intro.percent;
+    userPercent = progress[i].intro.percent; // obtiene porcentaje total
+    userProgress = Object.values(progress[i].intro.units); // aqui entro al objeto units
 
-    userProgress = Object.values(progress[i].intro.units); // tratar de ver como saco la otra data u_u
 
-    // let readsTotal=0;
+    // js no puede leer el 01-nombre unidad, asi que uso foreach para entrar
     let readsCompleted = 0;
-
+    let quizCompleted = 0;
+    let practiceCompleted = 0;
+    
     userProgress.forEach(course => {
       Object.values(course.parts).forEach(parts => {
         switch (parts.type) {
         case 'read':
-          // readsTotal++;
-         
-          if (parts.completed == 1) {
+          if (parts.completed === 1) {
             readsCompleted++;
           }
+          case 'quiz':
+          if (parts.completed == 1) {
+            quizCompleted++;
+          }
+          case 'practice':
+          if (parts.completed == 1) {
+            practiceCompleted++;
+          }
         };
-
       });
     });
 
@@ -71,6 +78,8 @@ function computeUsersStats() {
 
     console.log('--------------------------------------');
     console.log(readsCompleted);
+    console.log(quizCompleted);
+    console.log(practiceCompleted);
     console.log('---------------------------------------');
   }
 }
