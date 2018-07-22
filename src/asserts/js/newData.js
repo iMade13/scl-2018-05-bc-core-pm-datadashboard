@@ -1,15 +1,11 @@
 let users;
 let progress;
-let cohorts ;
+let cohorts;
 
-let userId= 0;
-let userName=0;
-let userProgress =0;
-let userPercent= {}; // aqui no sé que onda, help!
-let userExercises=0;
-let quiz;
-let userData=0;
-let userData2=0;
+let userId = 0;
+let userName = 0;
+let userPercent = 0; 
+let userProgress = 0; // tratando de entrar al objeto para sacar % de lecturas y demases
 
 // archivo para experimentar con js
 Promise.all([ // Ejecuta todas las llamadas de manera paralela.
@@ -17,69 +13,31 @@ Promise.all([ // Ejecuta todas las llamadas de manera paralela.
   fetch('../data/cohorts/lim-2018-03-pre-core-pw/progress.json'),
   fetch('../data/cohorts.json')
 ]).then((responses) => { // Responde a todas las promesas.
-  return Promise.all(responses.map((response => response.json())));
+  return Promise.all(responses.map((response => response.json()))); // traduce el "el texto plano" en JSON
 }).then((data) => { // Arreglo de respuestas en json.
   users = Object.values(data[0]);
   progress = Object.values(data[1]);
   cohorts = Object.keys(data[2]);
-
-  console.log(cohorts);
-  console.log(progress);
-  console.log(users);
-
-  }).catch(
-    () => {
-      console.log('fallo fetch');
-    }
-  );
+}).catch(
+  () => {
+    console.log('fallo fetch');
+  }
+);
 
 function computeUsersStats() {
-
-
-
   for (i = 0; i < users.length; i++) { // recorrido que reconoce los id
-    userId = users[i].id;
-    userName = users[i].name;
-    userProgress =Object.entries(progress[i].intro.units);
-    userData0= Object.entries(userProgress[0]);
-    userData1= Object.entries(userProgress[1]);
-    userData2= Object.entries(userProgress[2]);
+    userId = users[i].id; // obtiene id
+    userName = users[i].name; // obtiene nombre
+    userPercent = progress[i].intro.percent; // obtiene porcentaje total 
+    userProgress = Object.entries(progress[i].intro.units); // tratar de ver como saco la otra data u_u
 
-    userData3=Object.values(userData0[1]);
-    userData4=Object.entries(userData3);
-
-    userPercent = progress[i].intro.percent;
-    
-
-   
-
-
-    console.log("nombre: "  + userName)
-    console.log("porcentaje: "+userPercent)
-    console.log("cursos: "+userProgress)
-    console.log("asd " + userData4);
-   
-   
-  
-    
-
-    console.log("---------------------------------------")
-
-    
-    document.write(userName+'.....')
-    document.write(userPercent+'.....')
-
-
-   
-
-    
-   
-
-  };
-
-  
+    console.log('id: ' + userId);
+    console.log('nombre: ' + userName);
+    console.log('porcentaje: ' + userPercent);
+    console.log('cursos: ' + userProgress);
  
-
-  }
+    console.log('---------------------------------------'); // me ayuda a visualizar en consola :)
+  };
+}
 
 
