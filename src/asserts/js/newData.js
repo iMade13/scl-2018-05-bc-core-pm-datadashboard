@@ -2,10 +2,14 @@ let users;
 let progress;
 let cohorts;
 
-let userId ={};
+let userId = {};
 let userName = 0;
-let userPercent = 0; 
+let userPercent = 0;
 let userProgress = 0; // tratando de entrar al objeto para sacar % de lecturas y demases
+
+let partes = 0;
+let types = 0;
+let asdf = '';
 
 // archivo para experimentar con js
 Promise.all([ // Ejecuta todas las llamadas de manera paralela.
@@ -25,31 +29,48 @@ Promise.all([ // Ejecuta todas las llamadas de manera paralela.
 );
 
 function computeUsersStats() {
+  let contador = 0;
+  
+
   for (i = 0; i < users.length; i++) { // recorrido que reconoce los id
     userId = users[i].id; // obtiene id
     userName = users[i].name; // obtiene nombre
-    userCourse=progress[i];
-    if (JSON.stringify(userCourse)==='{}') {
-     continue
-  }
+
+    userError = progress[i]; // para saltarse estudiantes con {} vacio
+    if (JSON.stringify(userError) === '{}') {
+      continue;
+    } // fin para saltarse {} vacio
+
     userPercent = progress[i].intro.percent;
-    userProgress = Object.entries(progress[i].intro.units); // tratar de ver como saco la otra data u_u
-    userReads=Object.entries(userProgress);
-    
-    //let tratardenomostrarobjets = JSON.stringify(userProgress); // challa
-    
-    console.log('id: ' + userId);
+
+    userProgress = Object.values(progress[i].intro.units); // tratar de ver como saco la otra data u_u
+
+    // let readsTotal=0;
+    let readsCompleted = 0;
+
+    userProgress.forEach(course => {
+      Object.values(course.parts).forEach(parts => {
+        switch (parts.type) {
+        case 'read':
+          // readsTotal++;
+         
+          if (parts.completed == 1) {
+            readsCompleted++;
+          }
+        };
+
+      });
+    });
+
+    contador++;
+
+    console.log(contador + ' // id: ' + userId);
     console.log('nombre: ' + userName);
     console.log('porcentaje: ' + userPercent);
     console.log('cursos: ' + userProgress);
-    console.log(userReads)
 
-    console.log ('--------------------------------------')
-    
-    console.log(userCourse)
-    
-    console.log('---------------------------------------'); // me ayuda a visualizar en consola :)
-  };
+    console.log('--------------------------------------');
+    console.log(readsCompleted);
+    console.log('---------------------------------------');
+  }
 }
-
-
