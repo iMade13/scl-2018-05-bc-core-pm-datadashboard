@@ -7,9 +7,8 @@ let userName = 0;
 let userPercent = 0;
 let userProgress = 0; // tratando de entrar al objeto para sacar % de lecturas y demases
 
-let partes = 0;
-let types = 0;
-let asdf = '';
+
+
 
 // archivo para experimentar con js
 Promise.all([ // Ejecuta todas las llamadas de manera paralela.
@@ -30,7 +29,6 @@ Promise.all([ // Ejecuta todas las llamadas de manera paralela.
 
 function computeUsersStats() {
   let contador = 0;
-  
 
   for (i = 0; i < users.length; i++) { // recorrido que reconoce los id
     userId = users[i].id; // obtiene id
@@ -44,12 +42,11 @@ function computeUsersStats() {
     userPercent = progress[i].intro.percent; // obtiene porcentaje total
     userProgress = Object.values(progress[i].intro.units); // aqui entro al objeto units
 
-
     // js no puede leer el 01-nombre unidad, asi que uso foreach para entrar
     let readsCompleted = 0;
     let quizCompleted = 0;
     let practiceCompleted = 0;
-    
+
     userProgress.forEach(course => {
       Object.values(course.parts).forEach(parts => {
         switch (parts.type) {
@@ -57,7 +54,6 @@ function computeUsersStats() {
           if (parts.completed === 1) {
             readsCompleted++;
           }
-          
         };
       });
     });
@@ -69,11 +65,19 @@ function computeUsersStats() {
           if (parts.completed === 1) {
             quizCompleted++;
           }
-          
         };
       });
     });
 
+    let scoresuma = 0;
+    userProgress.forEach(quizscore => {
+     
+      Object.values(quizscore.parts).forEach(parts => {
+        if (parts.score) {
+          scoresuma = scoresuma + parts.score;
+        }
+      });
+    });
 
     userProgress.forEach(coursepractice => {
       Object.values(coursepractice.parts).forEach(parts => {
@@ -82,7 +86,6 @@ function computeUsersStats() {
           if (parts.completed === 1) {
             practiceCompleted++;
           }
-          
         };
       });
     });
@@ -98,6 +101,8 @@ function computeUsersStats() {
     console.log(readsCompleted);
     console.log(quizCompleted);
     console.log(practiceCompleted);
+    console.log(scoresuma);
+
     console.log('---------------------------------------');
   }
 }
