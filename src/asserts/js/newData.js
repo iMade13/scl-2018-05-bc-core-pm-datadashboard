@@ -2,6 +2,9 @@ let users;
 let progress;
 let cohorts; //  todavía no uso cohorts, ya lo activaré más adelante
 
+let students=[];
+
+
 let userId = {}; // se declara así porque hay usuarios vacios
 let userName = 0;
 let userPercent = 0;
@@ -24,8 +27,9 @@ Promise.all([ // Ejecuta todas las llamadas de manera paralela.
 );
 
 function computeUsersStats() {
+  
   let contador = 0; // usé este contador porque tenia problemas con los recorridos, me sirve para controlar la cantidad de bucles
-
+  
   for (i = 0; i < users.length; i++) { // recorrido que reconoce los id dentro de users
     userId = users[i].id; // obtiene id
     userName = users[i].name; // obtiene nombre
@@ -88,6 +92,7 @@ function computeUsersStats() {
       });
     });
 
+    students.push(userName,readsCompleted,practiceCompleted,quizCompleted,scoreAvg,userPercent);
     contador++;
 
     // para visualizar en consola
@@ -100,5 +105,16 @@ function computeUsersStats() {
     console.log('Promedio Quizes: ' + scoreAvg + '%');
     console.log('Completitud: ' + userPercent + '%');
     console.log('---------------------------------------');
+    
   }
+  console.log(students);
 }
+
+function filterUsers() {
+
+ filtro = students.filter();
+
+ console.log(filtro);
+   
+  
+};
