@@ -30,12 +30,26 @@ function computeUsersStats() {
     userName = users[i].name; // obtiene nombre
     userPercent = progress[i].intro.percent; // obtiene porcentaje total 
     userProgress = Object.entries(progress[i].intro.units); // tratar de ver como saco la otra data u_u
+    userReads=Object.entries(userProgress);
+    
+
+
+
+    let tratardenomostrarobjets = JSON.stringify(userProgress); // challa
+    
+
+
 
     console.log('id: ' + userId);
     console.log('nombre: ' + userName);
     console.log('porcentaje: ' + userPercent);
     console.log('cursos: ' + userProgress);
- 
+    console.log(userReads)
+
+    console.log ('--------------------------------------')
+    
+    console.log(tratardenomostrarobjets)
+    
     console.log('---------------------------------------'); // me ayuda a visualizar en consola :)
   };
 }
