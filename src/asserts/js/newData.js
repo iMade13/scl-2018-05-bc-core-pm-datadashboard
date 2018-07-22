@@ -8,8 +8,6 @@ let userPercent = 0;
 let userProgress = 0; // tratando de entrar al objeto para sacar % de lecturas y demases
 
 
-
-
 // archivo para experimentar con js
 Promise.all([ // Ejecuta todas las llamadas de manera paralela.
   fetch('../data/cohorts/lim-2018-03-pre-core-pw/users.json'),
@@ -69,12 +67,13 @@ function computeUsersStats() {
       });
     });
 
-    let scoresuma = 0;
+    let scoresum = 0;
+    let scoreAvg = 0;
     userProgress.forEach(quizscore => {
-     
       Object.values(quizscore.parts).forEach(parts => {
         if (parts.score) {
-          scoresuma = scoresuma + parts.score;
+          scoresum = scoresum + parts.score;
+          scoreAvg = Math.round(scoresum / 3);
         }
       });
     });
@@ -94,15 +93,11 @@ function computeUsersStats() {
 
     console.log(contador + ' // id: ' + userId);
     console.log('nombre: ' + userName);
-    console.log('porcentaje: ' + userPercent);
-    console.log('cursos: ' + userProgress);
-
-    console.log('--------------------------------------');
-    console.log(readsCompleted);
-    console.log(quizCompleted);
-    console.log(practiceCompleted);
-    console.log(scoresuma);
-
+    console.log('Lecturas Completadas: ' + readsCompleted+"/11");
+    console.log('Quizes Completadas: ' + quizCompleted + '/3');
+    console.log('Ejecicios Completadas: ' + practiceCompleted + '/2');
+    console.log('Promedio Quizes: ' + scoreAvg + '%');
+    console.log('Completitud: ' + userPercent + '%');
     console.log('---------------------------------------');
   }
 }
