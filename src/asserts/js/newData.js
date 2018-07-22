@@ -2,7 +2,7 @@ let users;
 let progress;
 let cohorts;
 
-let userId = 0;
+let userId ={};
 let userName = 0;
 let userPercent = 0; 
 let userProgress = 0; // tratando de entrar al objeto para sacar % de lecturas y demases
@@ -28,18 +28,16 @@ function computeUsersStats() {
   for (i = 0; i < users.length; i++) { // recorrido que reconoce los id
     userId = users[i].id; // obtiene id
     userName = users[i].name; // obtiene nombre
-    userPercent = progress[i].intro.percent; // obtiene porcentaje total 
+    userCourse=progress[i];
+    if (JSON.stringify(userCourse)==='{}') {
+     continue
+  }
+    userPercent = progress[i].intro.percent;
     userProgress = Object.entries(progress[i].intro.units); // tratar de ver como saco la otra data u_u
     userReads=Object.entries(userProgress);
     
-
-
-
-    let tratardenomostrarobjets = JSON.stringify(userProgress); // challa
+    //let tratardenomostrarobjets = JSON.stringify(userProgress); // challa
     
-
-
-
     console.log('id: ' + userId);
     console.log('nombre: ' + userName);
     console.log('porcentaje: ' + userPercent);
@@ -48,7 +46,7 @@ function computeUsersStats() {
 
     console.log ('--------------------------------------')
     
-    console.log(tratardenomostrarobjets)
+    console.log(userCourse)
     
     console.log('---------------------------------------'); // me ayuda a visualizar en consola :)
   };
