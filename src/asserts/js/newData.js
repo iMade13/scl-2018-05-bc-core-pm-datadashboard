@@ -26,6 +26,8 @@ Promise.all([ // Ejecuta todas las llamadas de manera paralela.
   }
 );
 
+
+//FUNCION 1
 function computeUsersStats() {
   
   let contador = 0; // usé este contador porque tenia problemas con los recorridos, me sirve para controlar la cantidad de bucles
@@ -91,8 +93,11 @@ function computeUsersStats() {
         };
       });
     });
+    
+ let studentData=[]
+ studentData.push(readsCompleted,practiceCompleted,quizCompleted,scoreAvg,userPercent)
 
-    students.push(userName,readsCompleted,practiceCompleted,quizCompleted,scoreAvg,userPercent);
+    students.push(userName,studentData);
     contador++;
 
     // para visualizar en consola
@@ -110,11 +115,9 @@ function computeUsersStats() {
   console.log(students);
 }
 
-function filterUsers() {
 
- filtro = students.filter();
+//FUNCION 2
 
- console.log(filtro);
-   
-  
-};
+
+
+
