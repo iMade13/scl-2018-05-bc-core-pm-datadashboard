@@ -2,8 +2,7 @@ let users;
 let progress;
 let cohorts; //  todavía no uso cohorts, ya lo activaré más adelante
 
-let students=[];
-
+let students = [];
 
 let userId = {}; // se declara así porque hay usuarios vacios
 let userName = 0;
@@ -26,12 +25,10 @@ Promise.all([ // Ejecuta todas las llamadas de manera paralela.
   }
 );
 
-
-//FUNCION 1
+// FUNCION 1
 function computeUsersStats() {
-  
   let contador = 0; // usé este contador porque tenia problemas con los recorridos, me sirve para controlar la cantidad de bucles
-  
+
   for (i = 0; i < users.length; i++) { // recorrido que reconoce los id dentro de users
     userId = users[i].id; // obtiene id
     userName = users[i].name; // obtiene nombre
@@ -93,31 +90,50 @@ function computeUsersStats() {
         };
       });
     });
-    
- let studentData=[]
- studentData.push(readsCompleted,practiceCompleted,quizCompleted,scoreAvg,userPercent)
 
-    students.push(userName,studentData);
+    users[i] = {
+      ...users[i],  /// siempre sale error de codigo aqui
+      stats: {
+        percent: userPercent,
+        exercises: {
+          total: 0,
+          completed: practiceCompleted,
+          percent: 0,
+        },
+
+        reads: {
+          total: 0,
+          completed: readsCompleted,
+          percent: 0,
+        },
+
+        quizzes: {
+          total: 0,
+          completed: quizCompleted,
+          percent: 0,
+          scoreSum: scoresum,
+          scoreAvg: scoreAvg,
+        },
+      }
+
+    };
+
     contador++;
 
     // para visualizar en consola
 
-    console.log(contador + ' // id: ' + userId);
-    console.log('nombre: ' + userName);
-    console.log('Lecturas Completadas: ' + readsCompleted + '/11');
-    console.log('Ejecicios Completados: ' + practiceCompleted + '/2');
-    console.log('Quizzes Completados: ' + quizCompleted + '/3');
-    console.log('Promedio Quizes: ' + scoreAvg + '%');
-    console.log('Completitud: ' + userPercent + '%');
-    console.log('---------------------------------------');
-    
+    // console.log(contador + ' // id: ' + userId);
+    // console.log('nombre: ' + userName);
+    // console.log('Lecturas Completadas: ' + readsCompleted + '/11');
+    // console.log('Ejecicios Completados: ' + practiceCompleted + '/2');
+    // console.log('Quizzes Completados: ' + quizCompleted + '/3');
+    // console.log('Promedio Quizes: ' + scoreAvg + '%');
+    // console.log('Completitud: ' + userPercent + '%');
+    // console.log('---------------------------------------');
+
+    console.log(users);
   }
-  console.log(students);
 }
 
-
-//FUNCION 2
-
-
-
+// FUNCION 2 sortUsers(users, orderBy, orderDirection)
 
