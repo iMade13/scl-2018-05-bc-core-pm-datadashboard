@@ -18,11 +18,6 @@ function cargarJSON() {
         console.log(data);
       });
       document.getElementById('resultado').innerHTML = html;
-    })
-
-  
-
-
-
+    });
 }
 
