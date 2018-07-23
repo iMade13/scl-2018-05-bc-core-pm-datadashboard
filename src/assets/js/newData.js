@@ -59,25 +59,28 @@ function computeUsersStats() {
             });
         });
 
-        userProgress.forEach(coursequiz => { // idem al anterior
-            Object.values(coursequiz.parts).forEach(parts => {
+        userProgress.forEach(coursequizz => { // idem al anterior
+            Object.values(coursequizz.parts).forEach(parts => {
                 switch (parts.type) {
-                    case 'quiz':
+                    case 'quizz':
+                        if (coursequizz.type === 1) {
+                            quizzTotal += 1;
+                        }
                         if (parts.completed === 1) {
-                            quizCompleted++;
+                            quizzCompleted++;
                         }
                 };
             });
         });
 
         // para sacar promedios de score de quiz
-        let scoresum = 0;
+        let scoreSum = 0;
         let scoreAvg = 0;
-        userProgress.forEach(quizscore => {
-            Object.values(quizscore.parts).forEach(parts => {
+        userProgress.forEach(quizzscore => {
+            Object.values(quizzscore.parts).forEach(parts => {
                 if (parts.score) {
-                    scoresum = scoresum + parts.score; // scoresum parte en 0, a medida que hace el bucle, agrega el valor de parts.score
-                    scoreAvg = Math.round(scoresum / 3); // math.round para eliminar decimales
+                    scoreSum = scoreSum + parts.score; // scoresum parte en 0, a medida que hace el bucle, agrega el valor de parts.score
+                    scoreAvg = Math.round(scoreSum / 3); // math.round para eliminar decimales
                 }
             });
         });
@@ -86,9 +89,13 @@ function computeUsersStats() {
             Object.values(coursepractice.parts).forEach(parts => {
                 switch (parts.type) {
                     case 'practice':
+                        if (parts.type === 1) {
+                            practiceTotal += 1;
+                        }
                         if (parts.completed === 1) {
                             practiceCompleted++;
                         }
+                        console.log(coursepractice);
                 };
             });
         });
@@ -111,7 +118,7 @@ function computeUsersStats() {
         // console.log('---------------------------------------');
 
     }
-    console.log();
+    // console.log();
 }
 
 
