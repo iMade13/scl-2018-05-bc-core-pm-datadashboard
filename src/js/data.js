@@ -9,7 +9,7 @@ Promise.all([ // Ejecuta todas las llamadas de manera paralela
     const progress = responseJsons[1];
     const cohorts = responseJsons[2];
     // console.log(users);
-    console.log(progress);
+    //console.log(progress);
     // console.log(cohorts);
     cohorts.forEach(element => {
 
@@ -19,11 +19,3 @@ Promise.all([ // Ejecuta todas las llamadas de manera paralela
     (error) => { // Al menos una llamada falló
     }
 );
-// console.log(element.role);
-// console.log(element.id);
-// hacer for o forEach para seleccionar un id o name, lo que sea...
-
-
-//
-// Código que ocupa los jsons...
-//
