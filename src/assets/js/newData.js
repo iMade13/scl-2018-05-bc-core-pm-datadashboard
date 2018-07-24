@@ -154,24 +154,63 @@ function computeUsersStats() {
    console.log(users);
 }
 
-  function filterUsers(search) {
+  function filterUsers(search) {//venia en la documentacion de mozilla
     return users.filter(function(element) {
         return element.name.toLowerCase().indexOf(search.toLowerCase()) > -1;
     })
   }
-  console.log(filterItems); 
+  console.log(filterUsers); 
 
 
-  function printUsers() { // invento challa, quizas me sirva más adelante :D
-    let cosa = users.filter(function (users) {
-      let wea=(users.name)
-      let wea2=(users.stats)
-      console.log(wea, wea2);
+
+function sortUsers(){ //venia en la documentacion de mozilla
+
+  let sort= users.sort(function (a, b) {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+  console.log(sort)
+
+} 
+
+
+
+function sortUsersZ(){ //venia en la documentacion de mozilla
+
+  let sort= users.sort(function (a, b) {
+    if (a.name < b.name) {
+      return 1;
+    }
+    if (a.name > b.name) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+  console.log(sort)
+
+} 
+
+
+
+
+
+
+  // function printUsers() { // invento challa, quizas me sirva más adelante :D
+  //   let cosa = users.filter(function (users) {
+  //     let wea=(users.name)
+  //     let wea2=(users.stats)
+  //     console.log(wea, wea2);
       
-    });
+  //   });
     
-   };
-  
-  
+  //  };
+
 
 
