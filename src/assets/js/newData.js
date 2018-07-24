@@ -65,20 +65,21 @@ function computeUsersStats() {
     let practiceCompleted = 0;
     let practiceTotal=0;
     let quizzTotal=3;
-    let readsTotal=11;
-    let percentReads=0;
-
+    let readsTotal=0;
+ 
     userProgress.forEach(course => { // course equivale a la propiedad 01-nombre curso, no puedo entrar de otra forma
       Object.values(course.parts).forEach(parts => { // dentro de course está la propiedad parts
         switch (parts.type) { // dentro de parts está type
         case 'read': // si type equivale a read
-        if (course.type === 'read') {
-            readsTotal += 1;
+        if (parts.type === 'read') {
+            readsTotal++;
+           
             }
           if (parts.completed === 1) { // busca si el valor de completed es = 1 (equivale a leido)
             readsCompleted++; // suma 1 por cada read encontrado
+            
           }
-          percentReads=0;
+          
         };
       });
     });
@@ -169,19 +170,16 @@ function computeUsersStats() {
   }
    console.log(users);
 }
-
 //---------------------------------------------
   
 function filterUsers(search) {//venia en la documentacion de mozilla
     return users.filter(function(element) {
         return element.name.toLowerCase().indexOf(search.toLowerCase()) > -1;
     })
+    console.log(filterUsers); 
   }
-  console.log(filterUsers); 
- 
+  
 //----------------------------------------------
-
-
 
 function sortUsersPercent(orderDirection){ //venia en la documentacion de mozilla
 
