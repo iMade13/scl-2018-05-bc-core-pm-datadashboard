@@ -204,20 +204,7 @@ function sortUsersName(orderDirection){ //venia en la documentacion de mozilla
   console.log(sorted)
 
   }
-  
  
-  
-
-
- 
-
-
-
-
-
-
-
-
   // function printUsers() { // invento challa, quizas me sirva más adelante :D
   //   let cosa = users.filter(function (users) {
   //     let wea=(users.name)
@@ -227,6 +214,5 @@ function sortUsersName(orderDirection){ //venia en la documentacion de mozilla
   //   });
     
   //  };
-
 
 
