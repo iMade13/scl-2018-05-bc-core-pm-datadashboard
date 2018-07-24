@@ -2,7 +2,7 @@ let users;
 let progress;
 let cohorts; //  todavía no uso cohorts, ya lo activaré más adelante
 
-let students = [];
+//let students = [];
 
 
 let userId = {}; // se declara así porque hay usuarios vacios
@@ -154,16 +154,24 @@ function computeUsersStats() {
    console.log(users);
 }
 
+  function filterUsers(search) {
+    return users.filter(function(element) {
+        return element.name.toLowerCase().indexOf(search.toLowerCase()) > -1;
+    })
+  }
+  console.log(filterItems); 
 
-// FUNCION 2
-// window.sortUsers = (users, orderBy, orderDirection) => {
 
-// }
+  function printUsers() { // invento challa, quizas me sirva más adelante :D
+    let cosa = users.filter(function (users) {
+      let wea=(users.name)
+      let wea2=(users.stats)
+      console.log(wea, wea2);
+      
+    });
+    
+   };
+  
+  
 
-function filterUsers(filtro) {
-   filtro = users.filter(element => {
-    filtro1= element.name;
-  });
 
-    console.log(filtro1)
-  };
