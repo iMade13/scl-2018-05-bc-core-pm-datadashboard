@@ -35,8 +35,24 @@ function computeUsersStats() {
   for (i = 0; i < users.length; i++) { // recorrido que reconoce los id dentro de users
     userId = users[i].id; // obtiene id
     userName = users[i].name; // obtiene nombre
+
     userError = progress[i]; // para saltarse estudiantes con {} vacio
-    if (JSON.stringify(userError) === '{}') { // convierte el json en texto plano
+    if (JSON.stringify(userError) === '{}') { 
+      
+      users[i] = {
+        ...users[i],
+        stats: {
+          percent: 0,
+          exercises: { percent: 0, },
+          reads: { percent: 0, },
+          quizzes: {
+            percent: 0,
+            scoreAvg: 0,
+          }
+        }
+      };
+      
+      // convierte el json en texto plano
       continue;
     } // fin para saltarse {} vacio, el userError no se muestra en la data, equivale a las estudiantes que solo se registraron, pero no entraron al lms
 
@@ -154,36 +170,32 @@ function computeUsersStats() {
    console.log(users);
 }
 
-  function filterUsers(search) {//venia en la documentacion de mozilla
+//---------------------------------------------
+  
+function filterUsers(search) {//venia en la documentacion de mozilla
     return users.filter(function(element) {
         return element.name.toLowerCase().indexOf(search.toLowerCase()) > -1;
     })
   }
   console.log(filterUsers); 
+ 
+//----------------------------------------------
 
 
 
-function sortUsers(orderBy){ //venia en la documentacion de mozilla
+function sortUsersPercent(orderDirection){ //venia en la documentacion de mozilla
 
-  let sort= users;
+  if (orderDirection === 'ASC') {
+    sorted = users.sort((a, b) => a.stats.percent - b.stats.percent);
+  }
+  if (orderDirection === 'DESC') {
+    sorted = users.sort((a, b) => (a.stats.percent - b.stats.percent)*-1);
+  }
   
-  users.sort(function (a, b) {
-    if (a.name > b.name) {
-      return 1;
-    }
-    if (a.name < b.name) {
-      return -1;
-    }
-    // a must be equal to b
-    return 0;
-  });
-  console.log(sort)
+  console.log(sorted)
+  }
 
-} 
-
-let sorted= users;
-
-function sortUsersZ(orderDirection){ //venia en la documentacion de mozilla
+function sortUsersName(orderDirection){ //venia en la documentacion de mozilla
 
   if (orderDirection === 'ASC') {
     sorted = users.sort((a, b) => a.name.localeCompare(b.name));
@@ -192,8 +204,16 @@ function sortUsersZ(orderDirection){ //venia en la documentacion de mozilla
     sorted = users.sort((a, b) => a.name.localeCompare(b.name) * -1);
   }
   console.log(sorted)
+
+  }
   
-} 
+ 
+  
+
+
+ 
+
+
 
 
 
