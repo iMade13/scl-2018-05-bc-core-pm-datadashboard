@@ -64,7 +64,7 @@ function computeUsersStats() {
     let quizzCompleted = 0;
     let practiceCompleted = 0;
     let practiceTotal=0;
-    let quizzTotal=3;
+    let quizzTotal=0;
     let readsTotal=0;
  
     userProgress.forEach(course => { // course equivale a la propiedad 01-nombre curso, no puedo entrar de otra forma
@@ -88,10 +88,10 @@ function computeUsersStats() {
       Object.values(coursequizz.parts).forEach(parts => {
         switch (parts.type) {
         case 'quiz':
-        //  if (coursequizz.type === 'quiz') {
-        //    quizzTotal+=1;
+         if (parts.type === 'quiz') {
+           quizzTotal+=1;
            
-        //    }
+            }
           if (parts.completed === 1) {
             quizzCompleted++;
          
