@@ -159,3 +159,11 @@ function computeUsersStats() {
 // window.sortUsers = (users, orderBy, orderDirection) => {
 
 // }
+
+function filterUsers(filtro) {
+   filtro = users.filter(element => {
+    filtro1= element.name;
+  });
+
+    console.log(filtro1)
+  };
