@@ -59,11 +59,11 @@ function computeUsersStats() {
             });
         });
 
-        userProgress.forEach(coursequizz => { // idem al anterior
+        userProgress.forEach(courseQuiz => { // idem al anterior
             Object.values(coursequizz.parts).forEach(parts => {
                 switch (parts.type) {
-                    case 'quizz':
-                        if (coursequizz.type === 1) {
+                    case 'quiz':
+                        if (courseQuiz.type === 'quiz') {
                             quizzTotal += 1;
                         }
                         if (parts.completed === 1) {
@@ -89,7 +89,7 @@ function computeUsersStats() {
             Object.values(coursepractice.parts).forEach(parts => {
                 switch (parts.type) {
                     case 'practice':
-                        if (parts.type === 1) {
+                        if (parts.type === 'practice') {
                             practiceTotal += 1;
                         }
                         if (parts.completed === 1) {
