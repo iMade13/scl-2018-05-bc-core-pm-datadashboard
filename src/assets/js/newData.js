@@ -163,9 +163,11 @@ function computeUsersStats() {
 
 
 
-function sortUsers(){ //venia en la documentacion de mozilla
+function sortUsers(orderBy){ //venia en la documentacion de mozilla
 
-  let sort= users.sort(function (a, b) {
+  let sort= users;
+  
+  users.sort(function (a, b) {
     if (a.name > b.name) {
       return 1;
     }
@@ -179,22 +181,18 @@ function sortUsers(){ //venia en la documentacion de mozilla
 
 } 
 
+let sorted= users;
 
+function sortUsersZ(orderDirection){ //venia en la documentacion de mozilla
 
-function sortUsersZ(){ //venia en la documentacion de mozilla
-
-  let sort= users.sort(function (a, b) {
-    if (a.name < b.name) {
-      return 1;
-    }
-    if (a.name > b.name) {
-      return -1;
-    }
-    // a must be equal to b
-    return 0;
-  });
-  console.log(sort)
-
+  if (orderDirection === 'ASC') {
+    sorted = users.sort((a, b) => a.name.localeCompare(b.name));
+  }
+  if (orderDirection === 'DESC') {
+    sorted = users.sort((a, b) => a.name.localeCompare(b.name) * -1);
+  }
+  console.log(sorted)
+  
 } 
 
 
